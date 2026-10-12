@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="#fefefe" name="theme-color"/><meta content="light" name="color-scheme"/>
-<title>CorreyZhang — 留下的片段 · V0.3.4</title>
+<title>CorreyZhang</title>
 <meta content="一些做过的、喜欢的、偶尔想起来的东西。随便看看。" name="description"/>
 <style>
 :root{--ink:#262726;--muted:#8b8b86;--line:#ecebe8;--paper:#fefefe;--ease:cubic-bezier(.22,.76,.2,1)}
@@ -30,14 +30,14 @@ footer{display:flex;align-items:center;justify-content:space-between;gap:20px;pa
 dialog#viewer{position:fixed;inset:0;width:100%;height:100dvh;max-width:none;max-height:none;margin:0;padding:0;border:0;background:#fefefe;color:var(--ink);overflow:auto;overscroll-behavior:contain}dialog#viewer::backdrop{background:#fff}dialog#viewer[open]{animation:enter .32s var(--ease)}@keyframes enter{from{opacity:.12;transform:translateY(8px)}to{opacity:1;transform:none}}.viewer-head{position:sticky;top:0;z-index:25;display:flex;align-items:center;justify-content:space-between;padding:22px 50px;background:#fffffff0;backdrop-filter:blur(18px);font-size:14px}.back{min-height:44px;display:flex;gap:11px;align-items:center}.back:before{content:"+";font:300 24px/1 sans-serif;transform:rotate(45deg);display:block}.back:hover{color:#8f8b83}.viewer-head .counter{font-size:12px;color:#a6a29a}.reader{width:min(100% - 48px,640px);margin:clamp(65px,12vh,145px) auto 135px}.reader .eyebrow{font-size:11px;letter-spacing:.14em;color:#aaa6a0;text-transform:uppercase}.reader h2{font-size:clamp(32px,4vw,51px);letter-spacing:-.05em;line-height:1.42;font-weight:450;margin:22px 0 40px}.reader p{font-size:17px;line-height:2.02;color:#565651;margin:0 0 21px;text-wrap:pretty}.reader p.lead{font-size:clamp(20px,2.8vw,25px);line-height:1.9;color:#30312d}.reader .sepline{height:1px;background:#edebe7;margin:40px 0 28px}.reader .whisper{color:#99968f;font-size:13px}.reader .serif{font-family:"Songti SC","STSong",Georgia,serif;font-size:clamp(24px,3.6vw,37px);line-height:1.65;letter-spacing:.01em;color:#394147}.reader .bigword{font:400 clamp(87px,14vw,155px)/1.1 Georgia,serif;letter-spacing:-.095em;color:#56615a;margin:0 0 36px}.reader .bigword em{font-style:normal;color:#c48b6c}.reader .smallprint{font-size:11px;color:#aaa8a1;margin-top:55px}.reader .spark{color:#ba6557;font-size:16px}.reader blockquote{margin:0 0 28px;border-left:1px solid #dfddd7;padding-left:21px;font-size:18px;line-height:1.9;color:#444641}.reader .embed-img{display:block;width:100%;border-radius:14px;margin:35px 0;aspect-ratio:1.6;object-fit:cover}
 /* The gaze follows rather than taking over. It never blocks clicks. */
 .gaze{position:fixed;left:0;top:0;z-index:120;pointer-events:none;width:58px;height:58px;opacity:0;transform:translate3d(-80px,-80px,0);transition:opacity .22s, width .26s var(--ease),height .26s var(--ease);mix-blend-mode:difference;will-change:transform}.gaze .iris{position:absolute;inset:0;border:1px solid #f7f7f7c9;border-radius:50%;transition:border .2s,background .2s}.gaze .pupil{position:absolute;left:50%;top:50%;width:5px;height:5px;border-radius:50%;background:#fff;transform:translate(calc(-50% + var(--pupil-x,0px)),calc(-50% + var(--pupil-y,0px)));transition:transform .1s}.gaze .track{position:absolute;inset:-5px;border:1px solid #ffffff35;border-radius:50%;opacity:1;transform:scale(1);transition:all .28s}.gaze .cross-h,.gaze .cross-v{position:absolute;top:50%;left:50%;background:#ffffff80;opacity:0;transition:opacity .22s}.gaze .cross-h{width:14px;height:1px;transform:translate(-50%,-50%)}.gaze .cross-v{width:1px;height:14px;transform:translate(-50%,-50%)}.gaze.active{width:58px;height:58px}.gaze.active .track{opacity:1;transform:scale(1)}.gaze.active .iris{background:#ffffff15}.gaze.active .cross-h,.gaze.active .cross-v{opacity:.6}.gaze.active .pupil{width:7px;height:7px}.gaze.hidden{opacity:0!important}
-@media(pointer:fine) and (hover:hover){body.gaze-ready,body.gaze-ready button,body.gaze-ready a{cursor:none}body.gaze-ready .gaze{opacity:1}body.gaze-ready dialog#viewer,body.gaze-ready dialog#viewer *{cursor:none!important}}
+@media(pointer:fine) and (hover:hover){body.gaze-ready .gaze{opacity:1}}
 @media(max-width:1130px){.site-head,.viewer-head{padding-left:32px;padding-right:32px}.feature{padding-left:32px;padding-right:32px}.work-meta{left:32px;max-width:128px}.piece{width:62vw;margin-left:80px}.twin{padding-left:32px;padding-right:32px}.twin .piece{margin-left:0}.after{padding-left:32px;padding-right:32px}}
 @media(max-width:760px){.site-head,.viewer-head{padding:18px 23px;font-size:14px}.feature,.feature.hero{display:flex;flex-direction:column;align-items:stretch;justify-content:center;min-height:88svh;padding:99px 23px 67px}.feature.hero{min-height:100svh;padding-bottom:110px}.work-meta{position:static;transform:none;max-width:none;order:2;margin-top:22px}.work-meta h1,.work-meta h2{font-size:14px}.work-meta .whisper{font-size:12px;opacity:1;transform:none}.piece{width:100%;margin:0}.frame{border-radius:18px;aspect-ratio:1.26}.hero .frame{aspect-ratio:1.26}.piece:hover .frame{transform:none;box-shadow:none}.hint,.below{opacity:1;transform:none}.hint{right:13px;bottom:13px;font-size:11px;padding:7px 11px}.below{font-size:11px;padding-top:10px}.below span:last-child{display:none}.scroll-note{bottom:13px;font-size:11px}.scroll-note:after{height:15px}.blond .word{font-size:clamp(100px,24vw,210px)}.note-sheet{width:53%;height:78%;padding:18px}.note-sheet:before{top:45px}.note-sheet strong{font-size:clamp(24px,6.8vw,39px)}.twin{display:block;padding:10px 23px 40px}.twin-item{margin-bottom:58px}.twin .frame{aspect-ratio:1.25}.twin-item .item-name{font-size:14px}.after{padding:30px 23px 90px}.small-pieces{grid-template-columns:1fr;gap:0}.small-piece .names strong{font-size:15px}.reader{width:min(100% - 52px,640px);margin:60px auto 90px}.reader h2{font-size:32px}.reader p{font-size:16px}.reader p.lead{font-size:21px}footer{padding:25px 23px 29px;font-size:11px}}
 @media(hover:none){.hint,.below,.work-meta .whisper{opacity:1;transform:none}.blond .letter{opacity:1;transform:translateX(-.095em)}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important;scroll-behavior:auto!important}.gaze{display:none!important}body.gaze-ready,body.gaze-ready button,body.gaze-ready a{cursor:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important;scroll-behavior:auto!important}.gaze{display:none!important}}
 
 /* V0.3.1: real cover art and stills augment, never replace, the offline fallback artwork. */
-.remote-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;z-index:2;transition:opacity .55s var(--ease),transform .65s var(--ease);pointer-events:none;background:transparent}
+.remote-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1;z-index:2;transition:opacity .55s var(--ease),transform .65s var(--ease);pointer-events:none;background:transparent}
 .remote-art.loaded{opacity:1}
 .remote-art.cover-art{object-fit:contain;background:#f4f3ef}
 .remote-art.cover-b{opacity:0}
@@ -77,7 +77,7 @@ dialog#viewer{position:fixed;inset:0;width:100%;height:100dvh;max-width:none;max
 .reader .scrap small{display:block;font-size:13px;line-height:1.85;color:#8b8881}
 .scrap .scrap-shot{position:absolute;z-index:2;margin:0;border-radius:5px;padding:8px 8px 25px;background:white;box-shadow:0 5px 22px #39353016,0 2px 7px #3935300b;min-height:0;overflow:visible;transform:rotate(var(--tilt,0deg));transition:transform .32s ease,box-shadow .32s ease}
 .scrap .scrap-shot:hover{transform:rotate(0deg) translateY(-3px);z-index:6;box-shadow:0 12px 32px #39353020}
-.scrap .scrap-shot img{position:absolute;top:8px;left:8px;width:calc(100% - 16px);height:calc(100% - 33px);display:block;object-fit:contain;opacity:0;transition:opacity .3s ease;border-radius:1px;background:transparent}
+.scrap .scrap-shot img{position:absolute;top:8px;left:8px;width:calc(100% - 16px);height:calc(100% - 33px);display:block;object-fit:contain;opacity:1;transition:opacity .3s ease;border-radius:1px;background:transparent}
 .scrap .scrap-shot img.loaded{opacity:1}
 .scrap .photo-fallback{width:100%;height:100%;background:#ecebe8;color:#b2b0aa;display:grid;place-items:center;text-transform:uppercase;font:20px Georgia,serif;text-align:center;letter-spacing:.04em}
 .scrap .scrap-shot figcaption{position:absolute;bottom:4px;left:9px;right:9px;text-align:left;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#aaa6a0;line-height:1.4}
@@ -210,7 +210,7 @@ dialog#viewer{position:fixed;inset:0;width:100%;height:100dvh;max-width:none;max
 .scrap-mini .scrap-intro{width:34%;max-width:440px}
 .scrap .scrap-shot{background:#fff}
 .scrap .scrap-shot:has(img.loaded) .photo-fallback{visibility:hidden}
-.scrap .scrap-shot img{background:#fff}
+.scrap .scrap-shot img{background:#fff;opacity:1}
 .scrap .photo-fallback{background:linear-gradient(145deg,#f3f0e9,#e6e1d8);color:#736f67;font-size:clamp(16px,2vw,25px);padding:15px;overflow-wrap:anywhere}
 .scrap .ad-fallback{background:#b94f3e;color:#fff6e2;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:18px}
 .scrap .ad-fallback span{font:11px sans-serif;letter-spacing:.2em;opacity:.7}
@@ -285,7 +285,7 @@ dialog#viewer{position:fixed;inset:0;width:100%;height:100dvh;max-width:none;max
 @media(prefers-reduced-motion:reduce){body.gaze-ready dialog#viewer,body.gaze-ready dialog#viewer *{cursor:auto!important}}
 @media(min-width:1101px) and (max-height:780px){#viewer .scrap-saul .scrap-intro{top:7%}#viewer .scrap-saul .parking{top:48%;width:44%;height:36%}#viewer .scrap-saul .prison{top:37%;width:39%;height:40%}}
 /* Coarse input never loses the native cursor if the window changes input mode. */
-@media(pointer:coarse),(hover:none){.gaze{display:none!important}body.gaze-ready,body.gaze-ready button,body.gaze-ready a{cursor:auto!important}}
+@media(pointer:coarse),(hover:none){.gaze{display:none!important}}
 </style>
 <style>
 /* V0.3.4: each existing entry keeps the same full-stage rhythm as Frank and Persona. */
@@ -549,7 +549,7 @@ if(fine.matches&&!reduced.matches){let x=-120,y=-120,tx=-120,ty=-120,prevX=-120,
   const fail=()=>{img.classList.remove('loaded');img.style.display='none';img.dataset.mediaState='fallback'};
   const done=()=>{if(img.naturalWidth<80||img.naturalHeight<80)return fail();img.style.display='';img.classList.add('loaded');img.dataset.mediaState='loaded'};
   img.addEventListener('load',done);img.addEventListener('error',fail);
-  if(!img.getAttribute('src'))fail();else if(img.complete){if(img.naturalWidth)done();else fail()}
+    if(!img.getAttribute('src'))fail();else if(img.complete&&img.naturalWidth)done();
  }
  function scan(node){if(node.nodeType!==1)return;if(node.matches('img[data-real-media]'))bind(node);node.querySelectorAll('img[data-real-media]').forEach(bind)}
  scan(document.body);
